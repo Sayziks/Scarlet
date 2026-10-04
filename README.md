@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Sayziks/Scarlet/main/Banner.png" alt="SCARLET Banner" width="100%">
+</p>
+
 <div align="center">
 
 # SCARLET
