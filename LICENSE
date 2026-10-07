@@ -1,18 +1,87 @@
 SCARLET End-User License Agreement (EULA)
-
 Copyright (c) 2026 Sayziks. All rights reserved. / Все права защищены.
 
+Устанавливая или используя SCARLET, вы принимаете это соглашение. Если вы не согласны с ним, не устанавливайте и не используйте программу.
+Русский текст является основным. Английский перевод приведён ниже для удобства. / The Russian text prevails; an English translation follows.
+
+================================  РУССКИЙ  ================================
+
 1. ПРЕДОСТАВЛЕНИЕ ЛИЦЕНЗИИ
-Программа SCARLET (далее «Программное обеспечение») распространяется бесплатно в виде скомпилированных бинарных файлов (Freeware). Настоящее соглашение предоставляет вам право устанавливать и использовать Программное обеспечение на любом количестве устройств в личных или некоммерческих целях.
+Программа SCARLET (далее «Программное обеспечение») распространяется бесплатно в виде скомпилированных бинарных файлов (Freeware). Настоящее соглашение предоставляет вам непередаваемое и неисключительное право устанавливать и использовать Программное обеспечение на любом количестве ваших устройств в личных или некоммерческих целях. Использование в коммерческих целях, в том числе внутри организации, возможно только с письменного разрешения правообладателя.
 
 2. ОГРАНИЧЕНИЯ И ЗАКРЫТЫЙ КОД
-- Программное обеспечение распространяется с закрытым исходным кодом.
-- Запрещается осуществлять обратную разработку (реверс-инжиниринг), декомпиляцию, дизассемблирование, модификацию или попытку извлечения исходного кода компонентов программы.
-- Запрещается продавать, сдавать в аренду или использовать Программное обеспечение в коммерческих платных продуктах без письменного разрешения правообладателя.
-- Запрещается распространение модифицированных версий программы под оригинальным или любым другим наименованием.
+- Программное обеспечение распространяется с закрытым исходным кодом. Исходный код не передаётся.
+- Запрещается осуществлять обратную разработку (реверс-инжиниринг), декомпиляцию, дизассемблирование, модификацию или попытку извлечения исходного кода собственных компонентов программы. Запрет не действует там, где его отмену прямо устанавливает применимое законодательство, и не распространяется на компоненты третьих лиц, лицензии которых это разрешают (см. п. 3).
+- Запрещается продавать, сдавать в аренду, сублицензировать или использовать Программное обеспечение в коммерческих платных продуктах, а также включать его в платные наборы и рекламные установщики без письменного разрешения правообладателя.
+- Запрещается распространение модифицированных версий программы под оригинальным или любым другим наименованием, а также удаление или подмена названия, авторства и этого соглашения.
 
-3. КОМПОНЕНТЫ ТРЕТЬИХ СТОРОН
-В состав дистрибутива входит драйвер сетевого туннеля Wintun, авторские права на который принадлежат WireGuard LLC и регулируются соответствующей лицензией проекта WireGuard.
+3. РАСПРОСТРАНЕНИЕ
+Вы можете бесплатно передавать другим людям неизменённые установщики Программного обеспечения, полученные со страницы https://github.com/Sayziks/Scarlet, вместе с этим соглашением и со ссылкой на эту страницу. Официальные сборки публикуются только там.
 
-4. ОТКАЗ ОТ ГАРАНТИЙ И ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ
-ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ НА УСЛОВИЯХ «КАК ЕСТЬ» (AS IS), БЕЗ КАКИХ-ЛИБО ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ. АВТОР НЕ НЕСЕТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ ИЛИ СЛУЧАЙНЫЕ УБЫТКИ, СБОИ В РАБОТЕ СЕТЕВОГО ОБОРУДОВАНИЯ, СНИЖЕНИЕ СКОРОСТИ СОЕДИНЕНИЯ ИЛИ ПОТЕРЮ ДАННЫХ, ВОЗНИКШИЕ В РЕЗУЛЬТАТЕ ИСПОЛЬЗОВАНИЯ ДАННОГО ПО.
+4. КОМПОНЕНТЫ ТРЕТЬИХ СТОРОН
+Программное обеспечение использует компоненты с открытым исходным кодом и распространяемую библиотеку:
+- движок и служба WireGuard (лицензия MIT, WireGuard LLC);
+- драйвер сетевого туннеля Wintun (лицензия «Prebuilt Binaries License», WireGuard LLC);
+- логика локального прокси для Telegram, основанная на проекте tg-ws-proxy (лицензия MIT, автор Flowseal);
+- go-webview2, go-winloader, стандартная библиотека Go и пакеты golang.org/x (лицензии MIT, ISC и BSD-3-Clause).
+Эти компоненты принадлежат их авторам и распространяются на условиях собственных лицензий. Полный перечень и тексты лицензий приведены в файле THIRD-PARTY-NOTICES.txt (он устанавливается вместе с программой). Настоящее соглашение не ограничивает ваши права по этим лицензиям. Microsoft Edge WebView2 Runtime не входит в состав программы и устанавливается отдельно на условиях Microsoft.
+SCARLET является независимым проектом и никак не связан с Cloudflare, Telegram, WireGuard, Microsoft и их правообладателями. Названия принадлежат их владельцам.
+
+5. VPN-ПРОФИЛИ, ВСТРОЕННЫЕ КОНФИГУРАЦИИ И ПРОКСИ
+- SCARLET является только клиентом. Программа не предоставляет собственных серверов и не является VPN-сервисом.
+- Встроенные профили и профили, которые вы добавляете, подключают вас к сторонним серверам (например, к инфраструктуре Cloudflare WARP). Трафик проходит через эти серверы, и к нему применяются условия и политика их владельцев. Автор не контролирует эти серверы и не отвечает за их работу.
+- Прокси для Telegram работает на вашем компьютере. Его резервный канал может передавать трафик Telegram (он зашифрован самим Telegram) через сторонние домены-ретрансляторы; список таких доменов загружается с github.com. Резервный канал можно отключить в настройках.
+- Вы самостоятельно отвечаете за добавляемые конфигурации (.conf), за серверы, к которым подключаетесь, и за соблюдение законов вашей страны при использовании VPN и прокси. Не используйте программу для нарушения закона или прав третьих лиц.
+
+6. ПРИВАТНОСТЬ И СЕТЕВЫЕ ЗАПРОСЫ
+Программное обеспечение не содержит аналитики и телеметрии и не отправляет данные о вас автору. Настройки, профили и журнал ошибок (crash.log) хранятся только на вашем компьютере. Программа сама обращается к github.com для проверки и загрузки обновлений и для получения списка резервных доменов прокси; при этом GitHub видит ваш IP-адрес, как при открытии любой веб-страницы.
+
+7. ОБНОВЛЕНИЯ
+При запуске программа проверяет наличие новой версии и предлагает её установить. Обновление устанавливается только по вашему действию. Новые версии распространяются на условиях соглашения, приложенного к ним.
+
+8. ОТКАЗ ОТ ГАРАНТИЙ И ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ НА УСЛОВИЯХ «КАК ЕСТЬ» (AS IS), БЕЗ КАКИХ-ЛИБО ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ, В ТОМ ЧИСЛЕ ГАРАНТИЙ ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ, БЕСПЕРЕБОЙНОЙ И БЕЗОШИБОЧНОЙ РАБОТЫ И ДОСТУПНОСТИ ЛЮБЫХ САЙТОВ, СЕРВИСОВ И СЕРВЕРОВ ЧЕРЕЗ ПРОГРАММУ. АВТОР НЕ НЕСЁТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ ИЛИ СЛУЧАЙНЫЕ УБЫТКИ, СБОИ В РАБОТЕ СЕТЕВОГО ОБОРУДОВАНИЯ, СНИЖЕНИЕ СКОРОСТИ СОЕДИНЕНИЯ, БЛОКИРОВКУ АККАУНТОВ В ИГРАХ И СЕРВИСАХ ИЛИ ПОТЕРЮ ДАННЫХ, ВОЗНИКШИЕ В РЕЗУЛЬТАТЕ ИСПОЛЬЗОВАНИЯ ДАННОГО ПО, В МАКСИМАЛЬНО ДОПУСТИМОЙ ЗАКОНОМ СТЕПЕНИ.
+
+9. ПРЕКРАЩЕНИЕ
+Права по этому соглашению прекращаются автоматически, если вы его нарушили. В этом случае удалите Программное обеспечение и все его копии. Пункты 4, 5, 8 и 10 сохраняют силу после прекращения.
+
+10. ПРОЧЕЕ
+Если какое-либо положение признано недействительным, остальные сохраняют силу. Связаться с автором можно через раздел Issues на https://github.com/Sayziks/Scarlet.
+
+================================  ENGLISH  ================================
+
+1. LICENSE GRANT
+SCARLET (the "Software") is distributed free of charge as compiled binaries (freeware). This agreement grants you a non-transferable, non-exclusive right to install and use the Software on any number of your devices for personal or non-commercial purposes. Commercial use, including use within an organization, requires the copyright holder's written permission.
+
+2. RESTRICTIONS AND CLOSED SOURCE
+- The Software is distributed as closed source. The source code is not provided.
+- You must not reverse engineer, decompile, disassemble, modify or attempt to extract the source code of the program's own components. This does not apply where applicable law expressly allows it, nor to third-party components whose licenses allow it (see section 4).
+- You must not sell, rent, sublicense or use the Software in paid commercial products, or include it in paid bundles or ad-supported installers, without the copyright holder's written permission.
+- You must not distribute modified versions under the original or any other name, or remove or replace the name, authorship or this agreement.
+
+3. DISTRIBUTION
+You may give others unmodified installers of the Software obtained from https://github.com/Sayziks/Scarlet free of charge, together with this agreement and a link to that page. Official builds are published only there.
+
+4. THIRD-PARTY COMPONENTS
+The Software uses open-source components and a redistributable library: the WireGuard engine and service code (MIT, WireGuard LLC); the Wintun network tunnel driver ("Prebuilt Binaries License", WireGuard LLC); Telegram proxy logic based on tg-ws-proxy (MIT, by Flowseal); go-webview2, go-winloader, the Go standard library and golang.org/x packages (MIT, ISC and BSD-3-Clause). They belong to their authors and are licensed under their own terms, listed in full in THIRD-PARTY-NOTICES.txt (installed with the program). This agreement does not limit your rights under those licenses. Microsoft Edge WebView2 Runtime is not part of the Software and is installed separately under Microsoft's terms. SCARLET is an independent project and is not affiliated with Cloudflare, Telegram, WireGuard, Microsoft or their owners.
+
+5. VPN PROFILES, BUILT-IN CONFIGURATIONS AND PROXY
+- SCARLET is a client only. It provides no servers of its own and is not a VPN service.
+- Built-in profiles and profiles you add connect you to third-party servers (for example, Cloudflare WARP infrastructure). Your traffic passes through those servers and is subject to their owners' terms and policies. The author does not control them and is not responsible for them.
+- The Telegram proxy runs on your computer. Its reserve channel may carry Telegram traffic (encrypted by Telegram itself) through third-party relay domains whose list is downloaded from github.com. You can turn the reserve channel off in the settings.
+- You are responsible for the configurations (.conf) you add, the servers you connect to, and compliance with the laws of your country when using VPN and proxy tools. Do not use the Software to violate the law or the rights of others.
+
+6. PRIVACY AND NETWORK REQUESTS
+The Software contains no analytics or telemetry and sends no data about you to the author. Settings, profiles and the error log (crash.log) are stored only on your computer. The program itself contacts github.com to check for and download updates and to get the list of reserve proxy domains; GitHub sees your IP address, as with any web page.
+
+7. UPDATES
+On start the program checks for a new version and offers to install it. An update is installed only when you choose to. New versions are distributed under the agreement that accompanies them.
+
+8. DISCLAIMER OF WARRANTY AND LIMITATION OF LIABILITY
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING FITNESS FOR A PARTICULAR PURPOSE, UNINTERRUPTED OR ERROR-FREE OPERATION, AND THE AVAILABILITY OF ANY WEBSITE, SERVICE OR SERVER THROUGH THE SOFTWARE. THE AUTHOR IS NOT LIABLE FOR ANY DIRECT, INDIRECT OR INCIDENTAL DAMAGES, NETWORK EQUIPMENT FAILURES, REDUCED CONNECTION SPEED, ACCOUNT BANS IN GAMES AND SERVICES, OR DATA LOSS ARISING FROM THE USE OF THE SOFTWARE, TO THE MAXIMUM EXTENT PERMITTED BY LAW.
+
+9. TERMINATION
+Your rights under this agreement end automatically if you breach it. In that case delete the Software and all copies of it. Sections 4, 5, 8 and 10 survive termination.
+
+10. GENERAL
+If any provision is held invalid, the remaining provisions stay in force. Contact the author through Issues at https://github.com/Sayziks/Scarlet.
